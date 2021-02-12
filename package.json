@@ -1,0 +1,16 @@
+{
+  "name": "mini_ali",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "hmedhappy <ahmedferah216@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "backend" : "nodemon server.js --prefix backend",
+    "frontend" : "npm start --prefix client",
+    "full": "concurrently \"npm run backend\" \"npm run frontend\""
+
+  },
+  "dependencies": {
+    "concurrently": "^5.3.0"
+  }
+}
