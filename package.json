@@ -5,12 +5,12 @@
   "author": "hmedhappy <ahmedferah216@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "backend" : "nodemon server.js --prefix backend",
-    "frontend" : "npm start --prefix client",
+    "backend": "nodemon server.js --prefix backend",
+    "frontend": "npm start --prefix client",
     "full": "concurrently \"npm run backend\" \"npm run frontend\""
-
   },
   "dependencies": {
-    "concurrently": "^5.3.0"
+    "concurrently": "^5.3.0",
+    "styled-components": "^5.2.1"
   }
 }
