@@ -16,6 +16,18 @@ import offer3 from '../assets/img/banners/offer-2.jpg' ;
 import product1 from '../assets/SampleProducts/phone1.webp'
 import product2 from '../assets/SampleProducts/phone2.webp'
 import product3 from '../assets/SampleProducts/phone3.webp'
+import product33 from '../assets/SampleProducts/product1.webp'
+import product55 from '../assets/SampleProducts/product4.webp'
+import product66 from '../assets/SampleProducts/product5.webp'
+import product77 from '../assets/SampleProducts/product6.webp'
+import product88 from '../assets/SampleProducts/product7.webp'
+import product99 from '../assets/SampleProducts/product8.webp'
+import product111 from '../assets/SampleProducts/product9.webp'
+import product222 from '../assets/SampleProducts/product10.webp'
+import product333 from '../assets/SampleProducts/product11.webp'
+import product444 from '../assets/SampleProducts/product12.webp'
+import product555 from '../assets/SampleProducts/product13.webp'
+import product666 from '../assets/SampleProducts/product14.webp'
 import tv from '../assets/SampleProducts/tv.webp' ;
 
 import product4 from '../assets/img/product/big-1.jpg' ;
@@ -97,6 +109,37 @@ export default function Home() {
 
     ]  ;
 
+    const Products5= [
+        {name:"BannierPhoto" , image:product77},
+        {name:"BannierPhoto" , image:product99},
+        {name:"BannierPhoto" , image:product88},
+        {name:"BannierPhoto" , image:product66},
+        {name:"BannierPhoto" , image:product22},
+        {name:"BannierPhoto" , image:product55},
+
+    ]  ;
+
+    const Products6= [
+        {name:"BannierPhoto" , image:product55},
+        {name:"BannierPhoto" , image:product33},
+        {name:"BannierPhoto" , image:product88},
+        {name:"BannierPhoto" , image:product99},
+        {name:"BannierPhoto" , image:product77},
+        {name:"BannierPhoto" , image:product66},
+
+    ]  ;
+
+    const Products7= [
+        {name:"BannierPhoto" , image:product111},
+        {name:"BannierPhoto" , image:product222},
+        {name:"BannierPhoto" , image:product333},
+        {name:"BannierPhoto" , image:product444},
+        {name:"BannierPhoto" , image:product555},
+        {name:"BannierPhoto" , image:product666},
+
+    ]  ;
+    
+
 
     return (
         <>
@@ -113,11 +156,9 @@ export default function Home() {
                 style={{width:"auto",height:"200px"}} 
                 breakPointsB={true} />
 
-                <div>
-                    <hr/>
+                <div> <hr/>
                      <h4>Nouvelle Collection <span><NewReleasesOutlinedIcon/></span> </h4>
-                    <hr/>
-                </div>
+                 <hr/> </div>
                 <Banner 
                 className="carrouss" 
                 Banniere={BanniereXL} 
@@ -128,6 +169,7 @@ export default function Home() {
                         <h4>Top Achats 2020  <span><ShoppingBasketOutlinedIcon/></span> </h4>
                     <hr/>
                 </div>
+                
                 <Banner 
                 className="carrouss2" 
                 Banniere={Products1} 
@@ -136,7 +178,7 @@ export default function Home() {
 
                 <Banner 
                 className="carrouss2" 
-                Banniere={Products1} 
+                Banniere={Products2} 
                 style={{width:"auto",height:"200px"}} 
                 breakPointsB={true}/>
 
@@ -145,6 +187,12 @@ export default function Home() {
                         <h4>Consomable Frais   <span><ShoppingBasketOutlinedIcon/></span> </h4>
                     <hr/>
                 </div>
+                <Banner 
+                className="carrouss" 
+                Banniere={BanniereXL} 
+                style={{width:"100vw",height:"50vh"}} 
+                breakPointsB={false}/>
+                
 
                 <Banner 
                 className="carrouss2" 
@@ -158,7 +206,56 @@ export default function Home() {
                 style={{width:"auto",height:"200px"}} 
                 breakPointsB={true}/>
                
+
+                <div>
+                    <hr/>
+                        <h4>Consomable Frais   <span><ShoppingBasketOutlinedIcon/></span> </h4>
+                    <hr/>
+                </div>
+                <Banner 
+                className="carrouss" 
+                Banniere={BanniereXL} 
+                style={{width:"100vw",height:"50vh"}} 
+                breakPointsB={false}/>
+
+                <Banner 
+                className="carrouss2" 
+                Banniere={Products5} 
+                style={{width:"auto",height:"200px"}} 
+                breakPointsB={true}/>
+
+                <Banner 
+                className="carrouss2" 
+                Banniere={Products6} 
+                style={{width:"auto",height:"200px"}} 
+                breakPointsB={true}/>
+
+<div>
+                    <hr/>
+                        <h4>Consomable Frais   <span><ShoppingBasketOutlinedIcon/></span> </h4>
+                    <hr/>
+                </div>
+                <Banner 
+                className="carrouss" 
+                Banniere={BanniereXL} 
+                style={{width:"100vw",height:"50vh"}} 
+                breakPointsB={false}/>
+
+                <Banner 
+                className="carrouss2" 
+                Banniere={Products7} 
+                style={{width:"auto",height:"200px"}} 
+                breakPointsB={true}/>
+
+                <Banner 
+                className="carrouss2" 
+                Banniere={Products2} 
+                style={{width:"auto",height:"200px"}} 
+                breakPointsB={true}/>
+               
+               
                 <ProductsCards/>
+
 
         </>
     )

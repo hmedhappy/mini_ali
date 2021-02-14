@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import ResponsiveNav from './ResponsiveNav'
 
 import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined';
+import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
 import SearchOutlinedIcon from '@material-ui/icons/SearchOutlined';
 import PersonOutlineOutlinedIcon from '@material-ui/icons/PersonOutlineOutlined';
 
@@ -65,6 +66,11 @@ export default function Index() {
           
 
           </li>
+          <li className="nav-item">
+            <Button 
+            onClick={()=>logout()}
+            startIcon={<ShoppingBasketIcon/>} className="nav-link " href="#" tabindex="-1" > Shop </Button>
+            </li>
           <li className="nav-item">
             <Button 
             onClick={()=>logout()}
