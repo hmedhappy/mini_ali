@@ -1,0 +1,51 @@
+.cart-sidebar {
+  background: #97999e none repeat scroll 0 0;
+  overflow: auto;
+  position: fixed;
+  right: -400px;
+  text-align: left;
+  top: 0;
+  width: 400px;
+  z-index: 1031;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  height: 104vh;
+}
+.toggled .cart-sidebar {
+  right: 0px;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.cart-sidebar-body {
+  height: 66vh;
+  overflow: inherit;
+}
+.cart-sidebar-header {
+  background: #1c2224 none repeat scroll 0 0;
+  color: #fff;
+  padding: 18px 20px;
+}
+.cart-sidebar-header h5 {
+  color: #fff;
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0;
+}
+.cart-sidebar-header .float-right {
+  background: #fff none repeat scroll 0 0;
+  border-radius: 10px;
+  color: #000;
+  height: 26px;
+  line-height: 25px;
+  text-align: center;
+  width: 26px;
+}
+@media (max-width: 575.98px) {
+  .cart-sidebar {
+    width: 320px;
+  }
+}

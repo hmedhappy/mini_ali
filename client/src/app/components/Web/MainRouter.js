@@ -13,6 +13,8 @@ import NotFound from '../NotFound'
 
 import Signin from '../Auth/Login'
 
+import '../../../style/Main.css'
+
 
 export default function MainRouter() {
     const [auth, setauth] = useState(false);
@@ -34,23 +36,7 @@ export default function MainRouter() {
                 <Footer />
 
 
-                <style jsx>{`
-                .main{
-                    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    width: 100vw;
-                }
-                    .content{
-                        flex:1 ;
-                        display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-                    }
-                
-                    
-                `}</style>
+
 
             </div>
     )

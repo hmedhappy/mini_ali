@@ -1,0 +1,69 @@
+.logo {
+  width: 15vw;
+  height: 16vh;
+  top: 16%;
+  left: 0%;
+  transform: rotate(-22deg);
+  position: absolute;
+}
+@media (max-width: 768px) {
+  .logo {
+    width: 35vw;
+  }
+}
+
+.carrouss {
+  margin-top: -28px;
+  zoom: 0.6;
+}
+.carrouss > div:first-child {
+  width: 65%;
+  border-radius: 10px;
+}
+.carrouss > div > div {
+  margin: 0px -50px;
+}
+.carrouss > div > button {
+  z-index: 50;
+}
+
+@media (max-width: 768px) {
+  .carrouss {
+    width: 100% !important ;
+    zoom: 1;
+  }
+  .carrouss > div:nth-child(1) {
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  .imgg {
+    height: auto !important;
+  }
+}
+
+.carrouss3 {
+  width: 60% !important ;
+}
+
+.carrouss3 > div > button {
+  box-shadow: none;
+  background: none;
+}
+
+@media (max-width: 768px) {
+  .carrouss3 {
+    width: 100% !important ;
+  }
+}
+
+.carrouss2 {
+  width: 70% !important ;
+  margin: auto;
+}
+
+@media (max-width: 768px) {
+  .carrouss2 {
+    width: 100% !important ;
+  }
+}

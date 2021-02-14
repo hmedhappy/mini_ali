@@ -9,6 +9,7 @@ import {Redirect } from "react-router-dom";
 
 
 
+
 export default function Index() {
 
     const [errorLogin, seterrorLogin] = useState(false);
@@ -29,10 +30,10 @@ export default function Index() {
         })
     }
 
-    if (redirect === true ) return( <Redirect to="/users"/>)
+    if (redirect === true ) return( <Redirect to="/"/>)
     return (
         <div>
-            <form onSubmit={(e)=>handleSubmit(e)}>
+            <form className="login_form" onSubmit={(e)=>handleSubmit(e)}>
                   <TextField
                     error={errorLogin}
                     label="Username"
@@ -56,11 +57,10 @@ export default function Index() {
             </form>
             <style jsx>{`
             
-            form{
+            .login_form{
                     display: flex;
                     flex-direction: column;
                     align-items: center;
-                    border: 1px solid #191919;
                     padding: 35px;
                     border-radius: 10px;
 
