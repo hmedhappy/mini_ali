@@ -14,12 +14,14 @@ import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined';
 import SearchOutlinedIcon from '@material-ui/icons/SearchOutlined';
 import NewReleasesOutlinedIcon from '@material-ui/icons/NewReleasesOutlined';
 import ShoppingBasketOutlinedIcon from '@material-ui/icons/ShoppingBasketOutlined';
+import PersonOutlineOutlinedIcon from '@material-ui/icons/PersonOutlineOutlined';
 
 import Carousel from "react-elastic-carousel";
 import image1 from './image.jpg'
 import image2 from './immage.jpg'
 import banner from './SampleProducts/banner.webp';
 import banner2 from './SampleProducts/banner2.webp';
+import logo from './SampleProducts/logochlhh.png';
 
 import product1 from './SampleProducts/phone1.webp'
 import product2 from './SampleProducts/phone2.webp'
@@ -42,7 +44,9 @@ export default function Index() {
              <ResponsiveNav open={open}/>
  <nav className="navbar navbar-expand-lg fixed-top navbar-dark bg-dark" aria-label="Ninth navbar example">
     <div className="container-xl">
-      <a className="navbar-brand" href="#">Container XL</a>
+      <a className="navbar-brand" href="#">
+      <img className="logo" class="logo" src={logo}/>
+      </a>
       <button onClick={()=>setopen(!open)} className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample07XL" aria-controls="navbarsExample07XL" aria-expanded="true" aria-label="Toggle navigation">
         <span className="navbar-toggler-icon"></span>
       </button>
@@ -55,14 +59,10 @@ export default function Index() {
           <li className="nav-item">
             <a className="nav-link " href="#" tabindex="-1" ><span><ShoppingCartOutlinedIcon/></span> Panier </a>
           </li>
-          <li className="nav-item dropdown">
-            <a className="nav-link dropdown-toggle" href="#" id="dropdown07XL" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</a>
-            <ul className="dropdown-menu" aria-labelledby="dropdown07XL">
-              <li><a className="dropdown-item" href="#">Action</a></li>
-              <li><a className="dropdown-item" href="#">Another action</a></li>
-              <li><a className="dropdown-item" href="#">Something else here</a></li>
-            </ul>
+          <li className="nav-item">
+            <a className="nav-link " href="#" tabindex="-1" ><span><PersonOutlineOutlinedIcon/></span> Sign-in </a>
           </li>
+         
         </ul>
       </div>
     </div>
@@ -81,19 +81,26 @@ export default function Index() {
                 </div>
 
                 {/* ********************************* Carpussol ********************************* */}
-                <Carousel className="carrouss" >
+                <Carousel enableAutoPlay={true} autoPlaySpeed={2000}  className="carrouss" >
                     <div>
                         <img className="imgg" style={{width:"100vw",height:"50vh"}} src={banner} />
                     </div>
                     <div>
                         <img className="imgg" style={{width:"100vw",height:"50vh"}} src={banner2} />
                     </div> 
-                    <h1>Three</h1>
-                    <h1>Four</h1>
-                    <h1>Five</h1>
-                    <h1>Six</h1>
-                    <h1>Seven</h1>
-                    <h1>Eight</h1>
+                    <div>
+                        <img className="imgg" style={{width:"100vw",height:"50vh"}} src={banner} />
+                    </div>
+                    <div>
+                        <img className="imgg" style={{width:"100vw",height:"50vh"}} src={banner} />
+                    </div>
+                    <div>
+                        <img className="imgg" style={{width:"100vw",height:"50vh"}} src={banner2} />
+                    </div> 
+                    <div>
+                        <img className="imgg" style={{width:"100vw",height:"50vh"}} src={banner2} />
+                    </div> 
+                    
                 </Carousel>
                 {/* ********************************* Carpussol ********************************* */}
 
@@ -104,7 +111,7 @@ export default function Index() {
                 <h4>Offre Special Promos <span><FavoriteBorderIcon/></span> </h4>
                 <hr/>
                 </div>
-                <Carousel className="carrouss2"  breakPoints={breakPoints}>
+                <Carousel enableAutoPlay={true} autoPlaySpeed={2000} className="carrouss2"  breakPoints={breakPoints}>
                     <div >
                     <img  style={{width:"auto",height:"200px"}} src={product1} />
                     <h6>telephone 24fd</h6>
@@ -143,6 +150,23 @@ export default function Index() {
                 </Carousel>
                 <style jsx>{`
 
+                .logo{
+                    width: 15vw;
+                    height: 16vh;
+                    top: 16%;
+                    left: 0%;
+                    transform: rotate(
+                -22deg
+                );
+                    position: absolute;
+                }
+                @media (max-width: 768px) {
+                    .logo{
+                        width: 35vw;
+
+                    }
+                }
+
 
                     .carrouss {
                         margin-top: -28px;
@@ -180,9 +204,7 @@ export default function Index() {
                         width :60% !important ;
  
                       }
-                      .carrouss3 > div:nth-child(2){
-                          display:none;
-                      }
+                      
                       .carrouss3 > div > button {
                         box-shadow:none;
                         background : none ;
