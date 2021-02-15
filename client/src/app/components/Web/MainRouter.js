@@ -14,6 +14,7 @@ import NotFound from '../NotFound'
 import Signin from '../Auth/Login'
 
 import '../../../style/Main.css'
+import Shop from './views/Shop';
 
 
 export default function MainRouter() {
@@ -28,6 +29,7 @@ export default function MainRouter() {
                     <PrivateRoute setauth={setauth} exact path='/' component={Home} />
                     <PrivateRoute setauth={setauth} exact path='/users' component={AllUsers} />
                     <PrivateRoute  setauth={setauth} exact path='/posts' component={AllPosts} />
+                    <PrivateRoute  setauth={setauth} exact path='/shop' component={Shop} />
                 
                     <Route component={NotFound} />
                 </Switch>

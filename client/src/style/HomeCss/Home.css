@@ -11,6 +11,9 @@
     width: 35vw;
   }
 }
+.content {
+  text-align: center;
+}
 
 .carrouss {
   margin-top: -28px;
