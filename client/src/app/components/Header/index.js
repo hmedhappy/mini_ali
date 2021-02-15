@@ -33,12 +33,7 @@ export default function Index() {
 
    
     return (
-         <div className="header" /* onLoad={()=>setTimeout(() => {
-           setchario(true);
-           setTimeout(() => {
-             setchario(false);
-           }, 5000);
-         }, 1000)} */>
+         <div className="header">
            <Cart cartOpen={cartOpen} setcartOpen={setcartOpen}/>
              <ResponsiveNav open={open}/>
  <nav className="navbar navbar-expand-lg fixed-top navbar-dark bg-color " aria-label="Ninth navbar example" style={{color:"red !important"}}>  
@@ -62,12 +57,11 @@ export default function Index() {
       <div className="collapse navbar-collapse" id="navbarsExample07XL" style={{justifyContent: 'space-around',flex:'0.5'}}>
         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
           <li className="nav-item">
-
             <Button 
             onClick={()=>setcartOpen(!cartOpen)}
             startIcon={
-          <Badge badgeContent={4} color="error">
-            <ShoppingCartOutlinedIcon/>
+            <Badge badgeContent={4} color="error">
+              <ShoppingCartOutlinedIcon/>
             </Badge>
             } className="nav-link " href="#" tabindex="-1" >Panier </Button>
           

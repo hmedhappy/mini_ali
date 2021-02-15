@@ -29,17 +29,12 @@ app.get('/posts',(req,res)=>{
 app.post('/signin',(req,res)=>{
     const { login , password } = req.body ;
     var foundPassword = false ;
-    var foundLogin = false ;
+    var foundPassword = false ;
+    var found = false ;
     users.map(user=>{
-        if (user.name.trim().toLowerCase()==login.trim().toLowerCase()) foundLogin = true ;
-        if ( user.password.trim().toLowerCase() == password.trim().toLowerCase())foundPassword = true ;
+        if (user.name.trim().toLowerCase()==login.trim().toLowerCase() && user.password.trim().toLowerCase() == password.trim().toLowerCase()) found = true ;
     })
-    foundPassword && foundLogin ==true 
-            ? res.json({ login , password,auth:true}) 
-            : foundLogin ===false && foundPassword ===false
-                ? res.json({ login , password ,errorPassword : true,errorLogin:true})
-                : foundLogin
-                    ? res.json({ login , password ,errorPassword : true})
+                 found? res.json({ login , password ,auth:true })
                     : res.json({ login , password ,errorLogin : true})
 })
 

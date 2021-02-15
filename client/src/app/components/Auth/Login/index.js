@@ -20,7 +20,6 @@ export default function Index() {
     const handleSubmit = ( e ) => {
         e.preventDefault();
         SignIn.signIn(authData).then(data=>{
-            data?.errorPassword ? seterrorPassword(true) :seterrorPassword(false);
             data?.errorLogin ? seterrorLogin(true) :seterrorLogin(false);
            if ( data?.auth ) {
             const {login , password} = data ;
@@ -37,20 +36,20 @@ export default function Index() {
                   <TextField
                     error={errorLogin}
                     label="Username"
-                    helperText="Incorrect entry."
+                    helperText="mot de passe or login incorrect."
                     variant="outlined"
                     name="login"
                     value={authData.login}
                     onChange={(e)=>{seterrorLogin(false);setauthData((old)=>({...old,...{login:e.target.value}}))}}
                     />
                     <TextField
-                    error={errorPassword}
+                    error={errorLogin}
                     label="Password"
-                    helperText="Incorrect entry."
+                    helperText="mot de passe or login incorrect"
                     variant="outlined"
                     name="password"
                     value={authData.password}
-                    onChange={(e)=>{seterrorPassword(false);setauthData((old)=>({...old,...{password:e.target.value}}))}}
+                    onChange={(e)=>{seterrorLogin(false);setauthData((old)=>({...old,...{password:e.target.value}}))}}
 
         />
                 <input type="submit" value="Login"/>
