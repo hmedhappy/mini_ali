@@ -54,88 +54,91 @@ import product22 from '../assets/img/product/img-15.jpg' ;
 import '../../../../style/HomeCss/Home.css'
 import CategorieMenu from './CategorieMenu';
 
+import unipid from 'uniqid'
+
+
 export default function Home() {
 
 
     const BanniereXL= [
-        {name:"BannierPhoto" , image:banner},
-        {name:"BannierPhoto" , image:banner2},
-        {name:"BannierPhoto" , image:offer1},
-        {name:"BannierPhoto" , image:offer2},
-        {name:"BannierPhoto" , image:offer3},
-        {name:"BannierPhoto" , image:banner2},
+        {id:unipid(),name:"BannierPhoto" , image:banner},
+        {id:unipid(),name:"BannierPhoto" , image:banner2},
+        {id:unipid(),name:"BannierPhoto" , image:offer1},
+        {id:unipid(),name:"BannierPhoto" , image:offer2},
+        {id:unipid(),name:"BannierPhoto" , image:offer3},
+        {id:unipid(),name:"BannierPhoto" , image:banner2},
 
     ]  ;
 
     const Products1= [
-        {name:"BannierPhoto" , image:product1},
-        {name:"BannierPhoto" , image:product2},
-        {name:"BannierPhoto" , image:product3},
-        {name:"BannierPhoto" , image:tv},
-        {name:"BannierPhoto" , image:product1},
-        {name:"BannierPhoto" , image:product2},
-        {name:"BannierPhoto" , image:product3},
-        {name:"BannierPhoto" , image:tv},
+        {id:unipid(),name:"BannierPhoto" , image:product1},
+        {id:unipid(),name:"BannierPhoto" , image:product2},
+        {id:unipid(),name:"BannierPhoto" , image:product3},
+        {id:unipid(),name:"BannierPhoto" , image:tv},
+        {id:unipid(),name:"BannierPhoto" , image:product1},
+        {id:unipid(),name:"BannierPhoto" , image:product2},
+        {id:unipid(),name:"BannierPhoto" , image:product3},
+        {id:unipid(),name:"BannierPhoto" , image:tv},
 
     ]  ;
 
     const Products2= [
-        {name:"BannierPhoto" , image:product4},
-        {name:"BannierPhoto" , image:product5},
-        {name:"BannierPhoto" , image:product6},
-        {name:"BannierPhoto" , image:product7},
-        {name:"BannierPhoto" , image:product8},
-        {name:"BannierPhoto" , image:product9},
+        {id:unipid(),name:"BannierPhoto" , image:product4},
+        {id:unipid(),name:"BannierPhoto" , image:product5},
+        {id:unipid(),name:"BannierPhoto" , image:product6},
+        {id:unipid(),name:"BannierPhoto" , image:product7},
+        {id:unipid(),name:"BannierPhoto" , image:product8},
+        {id:unipid(),name:"BannierPhoto" , image:product9},
 
     ]  ;
 
     const Products3= [
-        {name:"BannierPhoto" , image:product10},
-        {name:"BannierPhoto" , image:product11},
-        {name:"BannierPhoto" , image:product12},
-        {name:"BannierPhoto" , image:product13},
-        {name:"BannierPhoto" , image:product14},
-        {name:"BannierPhoto" , image:product15},
+        {id:unipid(),name:"BannierPhoto" , image:product10},
+        {id:unipid(),name:"BannierPhoto" , image:product11},
+        {id:unipid(),name:"BannierPhoto" , image:product12},
+        {id:unipid(),name:"BannierPhoto" , image:product13},
+        {id:unipid(),name:"BannierPhoto" , image:product14},
+        {id:unipid(),name:"BannierPhoto" , image:product15},
 
     ]  ;
 
     const Products4= [
-        {name:"BannierPhoto" , image:product16},
-        {name:"BannierPhoto" , image:product17},
-        {name:"BannierPhoto" , image:product18},
-        {name:"BannierPhoto" , image:product19},
-        {name:"BannierPhoto" , image:product20},
-        {name:"BannierPhoto" , image:product21},
+        {id:unipid(),name:"BannierPhoto" , image:product16},
+        {id:unipid(),name:"BannierPhoto" , image:product17},
+        {id:unipid(),name:"BannierPhoto" , image:product18},
+        {id:unipid(),name:"BannierPhoto" , image:product19},
+        {id:unipid(),name:"BannierPhoto" , image:product20},
+        {id:unipid(),name:"BannierPhoto" , image:product21},
 
     ]  ;
 
     const Products5= [
-        {name:"BannierPhoto" , image:product77},
-        {name:"BannierPhoto" , image:product99},
-        {name:"BannierPhoto" , image:product88},
-        {name:"BannierPhoto" , image:product66},
-        {name:"BannierPhoto" , image:product22},
-        {name:"BannierPhoto" , image:product55},
+        {id:unipid(),name:"BannierPhoto" , image:product77},
+        {id:unipid(),name:"BannierPhoto" , image:product99},
+        {id:unipid(),name:"BannierPhoto" , image:product88},
+        {id:unipid(),name:"BannierPhoto" , image:product66},
+        {id:unipid(),name:"BannierPhoto" , image:product22},
+        {id:unipid(),name:"BannierPhoto" , image:product55},
 
     ]  ;
 
     const Products6= [
-        {name:"BannierPhoto" , image:product55},
-        {name:"BannierPhoto" , image:product33},
-        {name:"BannierPhoto" , image:product88},
-        {name:"BannierPhoto" , image:product99},
-        {name:"BannierPhoto" , image:product77},
-        {name:"BannierPhoto" , image:product66},
+        {id:unipid(),name:"BannierPhoto" , image:product55},
+        {id:unipid(),name:"BannierPhoto" , image:product33},
+        {id:unipid(),name:"BannierPhoto" , image:product88},
+        {id:unipid(),name:"BannierPhoto" , image:product99},
+        {id:unipid(),name:"BannierPhoto" , image:product77},
+        {id:unipid(),name:"BannierPhoto" , image:product66},
 
     ]  ;
 
     const Products7= [
-        {name:"BannierPhoto" , image:product111},
-        {name:"BannierPhoto" , image:product222},
-        {name:"BannierPhoto" , image:product333},
-        {name:"BannierPhoto" , image:product444},
-        {name:"BannierPhoto" , image:product555},
-        {name:"BannierPhoto" , image:product666},
+        {id:unipid(),name:"BannierPhoto" , image:product111},
+        {id:unipid(),name:"BannierPhoto" , image:product222},
+        {id:unipid(),name:"BannierPhoto" , image:product333},
+        {id:unipid(),name:"BannierPhoto" , image:product444},
+        {id:unipid(),name:"BannierPhoto" , image:product555},
+        {id:unipid(),name:"BannierPhoto" , image:product666},
 
     ]  ;
     

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Switch, Route, BrowserRouter } from 'react-router-dom';
 import NotFound from './components/NotFound'
-import MainRouter from './components/Web/MainRouter'
+import MainRouter from './components/Pages/MainRouter'
 import '../style/App.css';
 
 

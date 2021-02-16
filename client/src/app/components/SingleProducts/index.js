@@ -3,19 +3,41 @@ import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 import AddCircleOutlineIcon from '@material-ui/icons/AddCircleOutline';
 import { Button } from '@material-ui/core';
 
-export default function Index({product}) {
+export default function Index({setcart,cart,product}) {
+
+    const AddToCart = () => {
+        var exist = false ;
+      const newCart=  cart?.map(element=>{
+            if (element.id == product.id) {
+                element.qte = element.qte + 1 ;
+                exist = true ;
+            }
+            return element ;
+        })
+        const products = {
+            id:product.id,
+            qte:product.qte || 1,
+            photo:product.image,
+            name:product.name,
+            price:"3.200",
+            data:Date.now(),
+        }
+        exist ? setcart([...newCart]) : setcart([...newCart,products]) ;
+
+    }
+
     return (
-        <div class="card" style={{width:'13rem !important',margin:'15px',borderRadius:'10px'}}>
-                <img class="card-img-top" src={product.image} alt="Card image cap"/>
-                    <div class="card-body">
-                        <p class="card-text">{product.name}</p>
+        <div className="card" style={{width:'13rem !important',margin:'15px',borderRadius:'10px'}}>
+                <img className="card-img-top" src={product.image} alt="Card image cap"/>
+                    <div className="card-body">
+                        <p className="card-text">{product.name}</p>
                     </div>
-                    <div class="product-price-and-shipping" itemprop="offers" itemscope="" itemtype="https://schema.org/Offer">
+                    <div className="product-price-and-shipping" itemProp="offers" itemScope="" itemType="https://schema.org/Offer">
                       <Button
                       startIcon={ <FavoriteBorderIcon/>}>
                       </Button>
-                    <span class="sr-only">Prix de base</span>
-                <span class="regular-price">
+                    <span className="sr-only">Prix de base</span>
+                <span className="regular-price">
                         <strong>3,</strong>
                         <span>
                         900
@@ -23,6 +45,7 @@ export default function Index({product}) {
                         <strong>&nbsp;TND</strong>
                 </span>
                      <Button
+                     onClick={()=>AddToCart()}
                       startIcon={<AddCircleOutlineIcon/>}
                       >
                       </Button>

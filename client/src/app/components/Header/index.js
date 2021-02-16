@@ -1,4 +1,4 @@
-import React,{ useState } from 'react'
+import React,{ useState , useContext } from 'react'
 import '../../../style/Header.css'
 import { Link, Redirect } from 'react-router-dom'
 import ResponsiveNav from './ResponsiveNav'
@@ -18,17 +18,19 @@ import Cart from '../Cart'
 import logo from './logoo.png';
 import { Button } from '@material-ui/core';
 
-
+import {CartContext} from '../Pages/Contexts/CartContext';
 
 export default function Index() {
     const [open, setopen] = useState(false);
     const [cartOpen, setcartOpen] = useState(false);
     const [chario, setchario] = useState(false);
+    const [cart,setcart] = useContext(CartContext);
 
     const logout = ()=>{
       localStorage.removeItem("user");
       window.location='/signin';
     }
+    
 
 
    
@@ -45,9 +47,7 @@ export default function Index() {
       >Clediss</h2>
       </div>
       <a className="navbar-brand" href="#">
-      {/* <img className="logo" class="logo"  src={logo}/> */}
       </a>
-
       <form style={{    flex: '0.9'}}>
           <input style={{border: 'none',borderRadius:"10px"}} className="form-control" type="text" placeholder="Search" aria-label="Search"/>
         </form>
@@ -56,34 +56,35 @@ export default function Index() {
       </button>
       <div className="collapse navbar-collapse" id="navbarsExample07XL" style={{justifyContent: 'space-around',flex:'0.5'}}>
         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-          <li className="nav-item">
+          <li className="nav-item"
+          >
+    
             <Button 
             onClick={()=>setcartOpen(!cartOpen)}
             startIcon={
-            <Badge badgeContent={4} color="error">
+            <Badge badgeContent={cart.length} color="error">
               <ShoppingCartOutlinedIcon/>
             </Badge>
-            } className="nav-link " href="#" tabindex="-1" >Panier </Button>
-          
-
+            } className="nav-link " href="#" tabIndex="-1" >Panier </Button>
+           
           </li>
           <li className="nav-item">
             <Link
             to='/shop'
             >
             <Button 
-            startIcon={<ShoppingBasketIcon/>} className="nav-link " href="#" tabindex="-1" > Shop </Button>
+            startIcon={<ShoppingBasketIcon/>} className="nav-link " href="#" tabIndex="-1" > Shop </Button>
             </Link>
             </li>
           <li className="nav-item">
             <Button 
             onClick={()=>logout()}
-            startIcon={<PersonOutlineOutlinedIcon/>} className="nav-link " href="#" tabindex="-1" > Sign-Out </Button>
+            startIcon={<PersonOutlineOutlinedIcon/>} className="nav-link " href="#" tabIndex="-1" > Sign-Out </Button>
             </li>
             <li className="nav-item">
               <Link to='/'>
             <Button 
-            startIcon={<HomeTwoToneIcon style={{border: '2px solid',borderRadius: '50%',padding: '3px',fontSize: '33px'          }}/>} className="nav-link " href="#" tabindex="-1" >
+            startIcon={<HomeTwoToneIcon style={{border: '2px solid',borderRadius: '50%',padding: '3px',fontSize: '33px'          }}/>} className="nav-link " href="#" tabIndex="-1" >
 
             </Button>
            </Link>
@@ -95,8 +96,7 @@ export default function Index() {
   <style jsx>{`
   .bg-color{
     background-color: #203963 !important;
-  }
-  
+  }  
   `} </style>           
     </div>
     )
